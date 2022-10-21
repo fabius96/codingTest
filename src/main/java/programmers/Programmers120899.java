@@ -6,15 +6,13 @@ import java.util.Arrays;
 public class Programmers120899 {
     public int[] solution(int[] array) {
         int[] answer = new int[2];
-        int num = 0, cnt = 0;
+
         for(int i = 0; i < array.length; i++){
-            if(array[i] > num){
-                num = array[i];
-                cnt = i;
+            if(array[i] > answer[0]){
+                answer[0] = array[i];
+                answer[1] = i;
             }
         }
-        answer[0] = num;
-        answer[1] = cnt;
         return answer;
     }
 
