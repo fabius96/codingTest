@@ -1,18 +1,13 @@
 package programmers;
 
-import java.util.ArrayList;
-import java.util.Collections;
+import java.util.Arrays;
 
 /* 중앙값 구하기 */
 public class Programmers120811 {
     public int solution(int[] array) {
+        Arrays.sort(array);;
         int mid = array.length/2;
-        ArrayList<Integer> arrayList = new ArrayList<>();
-        for(int i : array){
-            arrayList.add(i);
-        }
-        Collections.sort(arrayList);
-        return arrayList.get(mid);
+        return array[mid];
     }
 
     public static void main(String[] arg) {
