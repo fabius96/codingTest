@@ -18,9 +18,10 @@ public class baekjoon2675 {
             int R = Integer.parseInt(st.nextToken());   // 문자 반복 횟수 R
             String str = st.nextToken();
             for (int j = 0; j < str.length(); j++) {
-                if (!str.contains(String.valueOf(str.charAt(j)))) arrayList.add(String.valueOf(str.charAt(j)));
+                String tmp = String.valueOf(str.charAt(j));
+                if (!str.contains(tmp)) arrayList.add(tmp);
                 for (int k = 0; k < R; k++) {
-                    bw.write(String.valueOf(str.charAt(j)));
+                    bw.write(tmp);
                 }
             }
             bw.write("\n");
